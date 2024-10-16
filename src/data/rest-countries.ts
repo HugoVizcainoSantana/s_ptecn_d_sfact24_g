@@ -77,7 +77,19 @@ export type Country = {
 };
 
 export const getAllCountries = async (): Promise<Country[]> => {
-    const countriesRequest = await fetch("https://restcountries.com/v3.1/all");
-    const countries = await countriesRequest.json();
+    const response = await fetch("https://restcountries.com/v3.1/all");
+    if (!response.ok) {
+        throw new Error(`Failed to fetch all countries data`);
+    }
+    const countries = await response.json();
+    return countries;
+};
+
+export const getRegionData = async (region: string): Promise<any> => {
+    const response = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch countries for region: ${region}`);
+    }
+    const countries = await response.json();
     return countries;
 };

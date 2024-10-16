@@ -1,0 +1,21 @@
+.regionContainer {
+    padding: 1rem;
+}
+
+.region {
+    margin-bottom: 2rem;
+}
+
+.region h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.region ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.region li {
+    padding: 0.25rem 0;
+}
