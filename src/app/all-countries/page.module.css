@@ -1,0 +1,21 @@
+.countries_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.country_item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: var(--background);
+  border: 1px solid var(--foreground);
+  border-radius: .5rem;
+  transition: transform 200ms ease-in-out;
+}
+
+.country_item:hover {
+  transform: scale(1.05);
+}
