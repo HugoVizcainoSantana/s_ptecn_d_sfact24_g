@@ -1,14 +1,17 @@
 :root {
-	--light-color: #e0e0e0;
-	--dark-color: #202020;
-	--background: var(--light-color);
-	--foreground: var(--dark-color);
+	--light-color: 224, 224, 224;
+	--dark-color: 20, 20, 20;
+	--primary-color: 212, 175, 55;
+	--background: rgb(var(--light-color));
+	--foreground: rgb(var(--dark-color));
+	--primary: rgb(var(--primary-color));
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: var(--dark-color);
-		--foreground: var(--light-color);
+		--background: rgb(var(--dark-color));
+		--foreground: rgb(var(--light-color));
+		--primary-color: 139, 111, 35;
 	}
 }
 
@@ -20,8 +23,8 @@ body {
 }
 
 body {
-	color: var(--foreground);
-	background: var(--background);
+	color: rgb(var(--foreground));
+	background: rgb(var(--background));
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -36,6 +39,25 @@ body {
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+.page-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+	.page-container {
+		padding: 0 2rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.page-container {
+		padding: 0 3rem;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
