@@ -18,9 +18,12 @@ Then we are creating a docker image of the app for easy deployment.
 
 To run the docker image, you can use the following command:
 
+### TODO Pending Create the Dockerfile
+
 ```bash
 docker run -d -p 3000:3000 s_ptecn_d_sfact24_g
 ```
+
 
 ## Authors
 
